@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Send the request with the Authorization header
-            const response = await fetch(`http://127.0.0.1:3000/darkskyroute/search?location=${encodeURIComponent(locationInput)}`, {
+            const response = await fetch(`https://skymap.onrender.com/darkskyroute/search?location=${encodeURIComponent(locationInput)}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

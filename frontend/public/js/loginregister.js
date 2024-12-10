@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000/api/users/'; // Note the trailing slash
+const API_BASE_URL = 'https://skymap.onrender.com/api/users/'; // Note the trailing slash
 
 function showLogin() {
     clearFormData('registerform');

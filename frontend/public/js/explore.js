@@ -4,7 +4,7 @@ async function fetchData(endpoint) {
         if (!token) {
             throw new Error('No authentication token found.');
         }
-        const response = await fetch(`http://localhost:3000/explore/${endpoint}`, {
+        const response = await fetch(`https://skymap.onrender.com/explore/${endpoint}`, {
             headers: {
                 'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
                 'Content-Type': 'application/json' // Optional but recommended for API requests
