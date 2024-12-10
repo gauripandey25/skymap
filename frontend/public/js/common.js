@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Redirect to the login page after a short delay
                     setTimeout(() => {
-                        window.location.href = 'login.html';
+                        window.location.href = 'index.html';
                     }, 800); // Adjust the delay as needed
                 });
             }
