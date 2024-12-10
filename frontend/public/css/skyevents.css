@@ -1,0 +1,203 @@
+/* Basic Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--nice);
+    background-size: cover;
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Heading and Paragraph Styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--snow);
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--periwinkle);
+}
+
+/* Hero Section */
+.hero {
+    background: url("../images/events.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--snow);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #301e7f24;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    padding: 0 20px;
+    margin-bottom: 0;
+    font-style: italic;
+    font-family: 'cormorant garamond', serif;
+}
+
+/* Timeline Styles */
+.timeline-header{
+    margin-top: 10px;
+    text-align: center;
+    color: var(--periwinkle);
+}
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 4px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+#events {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wrapper for Events */
+.event-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    box-sizing: border-box; /* Ensure padding/border are included in width */
+}
+
+/* Event Cards */
+.event {
+    position: relative;
+    width: calc(50% - 40px);
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--gradient-top2);
+    color: var(--periwinkle);
+    box-shadow: rgba(255, 255, 255, 0.536);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Ensure cards are correctly aligned */
+.event.left {
+    align-self: flex-start;
+    text-align: right;
+    margin-right: auto; /* Move to the left side */
+}
+
+.event.right {
+    align-self: flex-end;
+    text-align: left;
+    margin-left: auto; /* Move to the right side */
+}
+
+
+.event p {
+    margin: 0.5rem 0;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--snow);
+}
+
+/* Circles on the Line */
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--periwinkle); /* Dot color */
+    border-radius: 80%;
+    z-index: 0;
+}
+
+/* Position dots at the event position */
+.event-wrapper .dot {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animations */
+.event {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.event.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+/* Hover Effect */
+.event:hover {
+    box-shadow: 0 0.7px 20px #ffffff8e;
+    transform: translateY(-5px); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

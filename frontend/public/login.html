@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SkyMap | Login and Register</title>  
+</head>
+<body>
+    <div class="video-background">
+        <video id="bgVideo" autoplay loop muted>
+            <source src="images/Pink Retro Subscribe Youtube Video.mp4"video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="wrapper">
+        <div class="formbox">
+            <!-- Login form begins -->
+            <div class="logincontainer" id="login">
+                <div class="top">
+                    <h2 class="title">Skymap</h2>
+                    <span>Don't have an account? Register now <a href="#" onclick="showRegister()">Sign up</a></span>
+                    
+                </div>
+                <form id="loginform" action="#" method="post">
+                    <div class="inputbox">
+                        <input type="text" id="loginusername" name="username" placeholder="Username" class="inputfield" required>                       
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" id="loginpassword" name="password" placeholder="Password" class="inputfield" required>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Login" class="submit">
+                    </div>
+                </form>
+            </div>
+            <!-- Register form begins -->
+            <div class="registercontainer" id="register">
+                <div class="top">
+                    <h2 class="title">Skymap</h2>
+                    <span>Already have an account? Login <a href="#" onclick="showLogin()">Here</a></span>
+                </div>
+                <form id="registerform" action="#" method="post">
+                    <div class="inputbox">
+                        <input type="text" id="registerusername" name="username" placeholder="Username" class="inputfield" required>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" id="registeremail" name="email" placeholder="Email" class="inputfield" required>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" id="registerpassword" name="password" placeholder="Password" class="inputfield" required>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Register" class="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/loginregister.js"></script>
+    <script src="js/sessioncheck.js"></script>
+</body>
+</html>

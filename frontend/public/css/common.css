@@ -1,0 +1,135 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Common Styles */
+:root {
+    --penn-blue: #000139ff;
+    --penn-blue2: rgb(4, 5, 68);
+    --pennlight: #121469;
+    --nice: #0C0032ff;
+    --nicelight: #1f27bcd8;
+    --honolulu-blue: #0077b6ff;
+    --pacificdark: rgb(30, 146, 188);
+    --pacific-cyan: #00b4d8ff;
+    --celeste: #B2F5FFff;
+    --periwinkle: #E7D1FEff;
+    --snow: #FFFCFEff;
+    --new2: linear-gradient(to down, #000139ff, #12053b);
+    --button: linear-gradient(to right, #1f27bcd8, #097ec2db);
+    --new: linear-gradient(180deg, #2B32B2, #1488CC);
+    --gradient-top2: linear-gradient(180deg, #000139ff, #140645,#083562);
+    --gradient-top: linear-gradient(180deg, #000139ff, #12053b, #01203f);
+    --gradient-right: linear-gradient(90deg, #000139ff, #0077b6ff);
+    --gradient-bottom: linear-gradient(180deg, #000139ff, rgb(18, 5, 59), #00b4d8ff);
+    --gradient-left: linear-gradient(270deg, #000139ff, #0077b6ff, #00b4d8ff, #B2F5FFff, #E7D1FEff, #FFFCFEff);
+    --gradient-2-color: linear-gradient(135deg, #003366, #4682b4);
+    --gradient-3-color: linear-gradient(135deg, #002244, #4169e1, #87ceeb);
+    --event-card-gradient: linear-gradient(135deg, #1b1b2f, #16161a, #2c2c54);
+}
+
+/* Hide scrollbar but allow scrolling */
+
+/* Navbar styling */
+/* Ensure .nav styles are correctly applied */
+.nav {
+    color: var(--snow) !important;
+    padding: 15px 20px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+    background: var(--penn-blue) !important;
+    box-shadow: 0 4px 10px rgba(9, 15, 77, 0.31) !important;
+    box-sizing: border-box !important;
+}
+
+.navlogo {
+    flex-shrink: 0;
+}
+
+.navbutton {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-left: auto;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+.navlogo p {
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--snow);
+    margin: 0;
+    font-family: 'Outfit', sans-serif; /* Logo font */
+}
+
+.navbutton a, .navbutton button {
+    color: var(--snow);
+    padding: 10px 17px;
+    border-radius: 70px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Outfit'; /* Text font */
+    font-weight: 200; /* Increased font weight for buttons */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbutton a:hover, .navbutton button:hover {
+    background: var(--button);
+    box-shadow: 0 1px 12px rgba(99, 157, 238, 0.386);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--snow);
+}
+
+.navbutton.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--penn-blue);
+    padding: 20px;
+}
+
+#logoutbutton {
+    font-family: 'Outfit';
+    font-size: 1.1rem;
+    border-radius: 70px;
+    background-color: var(--penn-blue);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* Use inline-flex for better text handling */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element’s total width and height */
+    max-width: 100%; /* Allow button to expand within its container */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}

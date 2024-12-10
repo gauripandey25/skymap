@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Sky</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Explore the Night Sky</h1>
+                <p>Discover some of the constellations, planets, and prominent stars that you see in the sky.</p>
+                <div class="hero-buttons">
+                    <a href="#constellations" class="btn herobtn">Constellations</a>
+                    <a href="#planets" class="btn herobtn">Planets</a>
+                    <a href="#stars" class="btn herobtn">Stars</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Constellations Section -->
+        <section id="constellations" class="explore-section">
+            <h2>Constellations</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" data-container="constellation-container">‹</button>
+                <div id="constellation-container" class="card-container">
+                    <!-- Constellation cards will be dynamically loaded here -->
+                </div>
+                <button class="scroll-btn right" data-container="constellation-container">›</button>
+            </div>
+        </section>
+
+        <!-- Planets Section -->
+        <section id="planets" class="explore-section">
+            <h2>Planets</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" data-container="planet-container">‹</button>
+                <div id="planet-container" class="card-container">
+                    <!-- Planet cards will be dynamically loaded here -->
+                </div>
+                <button class="scroll-btn right" data-container="planet-container">›</button>
+            </div>
+        </section>
+
+        <!-- Stars Section -->
+        <section id="stars" class="explore-section">
+            <h2>Stars</h2>
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" data-container="star-container">‹</button>
+                <div id="star-container" class="card-container">
+                    <!-- Star cards will be dynamically loaded here -->
+                </div>
+                <button class="scroll-btn right" data-container="star-container">›</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/explore.js"></script>
+    <script src="js/sessioncheck.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

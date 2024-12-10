@@ -1,0 +1,155 @@
+/* Main Content Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--penn-blue2); /* Use the gradient background */
+    background-size: cover;
+    color: var(--snow); /* Ensure all text is legible against the dark background */
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hero Section Styles */
+#hero {
+    background: url("../images/6.png") no-repeat center center;
+    height: 80vh; /* Full viewport height */
+    background-size: cover; /* Ensure the image covers the section */
+    color: var(--snow); /* White text color for better contrast */
+    padding: 80px 20px; /* Add padding for spacing */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+
+.hero-content {
+    max-width: 600px; /* Restrict width for readability */
+}
+
+.hero-content h1 {
+    font-size: 3.2rem; /* Larger font size for the heading */
+    margin: 0; /* Remove default margin */
+    line-height: 1.2; /* Improve line spacing for readability */
+    font-weight: 300;
+}
+
+.hero-content p {
+    font-size: 1.4rem; /* Larger font size for the paragraph */
+    margin-top: 1rem; /* Space between heading and paragraph */
+    line-height: 1.6; /* Improve line spacing for readability */
+    font-family: 'cormorant garamond', serif; /* Use a serif font for the paragraph */
+}
+
+/* Section Styling */
+.section {
+    text-align: center;
+    margin-top: 80px; /* Space between the hero section and content */
+    margin-bottom: 2rem;
+    color: var(--snow); /* Ensures text color contrasts well with background */
+}
+
+.section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Makes it responsive on smaller screens */
+}
+
+#search {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px; /* Prevents input from becoming too wide */
+    height: 40px;
+    border: 2px solid var(--periwinkle); /* Border color for the input field */
+    border-radius: 30px;
+    color: var(--penn-blue); /* Text color for the input field */
+    background: var(--periwinkle); /* Background color for the input field */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    max-width: 120px; /* Keep button size consistent */
+    border-radius: 30px;
+    color: var(--penn-blue); /* Text color for the button */
+    background: var(--periwinkle); /* Background color for the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#search-button:hover {
+    background-color: var(--pacific-cyan); /* Change button background on hover */
+}
+
+/* Search Results */
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 20px; /* Add padding to ensure results don't touch the edges */
+}
+
+/* Style for result text */
+
+/* Reserve Card Styles */
+.reserve {
+    background: var(--honolulu-blue); /* Background color for the card */
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px; /* Restrict width to make cards consistent */
+    text-align: left;
+    color: var(--penn-blue); /* Text color for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.reserve:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhance shadow on hover */
+}
+
+.reserve h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reserve p {
+    margin: 0.5rem 0;
+    font-weight: 400;
+}

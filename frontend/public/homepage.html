@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Chart</title>
+    <script type="text/javascript" src="libs/d3.min.js"></script>
+    <script type="text/javascript" src="libs/d3.geo.projection.min.js"></script>
+    <script type="text/javascript" src="libs/celestial.min.js"></script>
+    <script type="text/javascript" src="js/sessioncheck.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/homepage.js" defer></script> <!-- Ensure JS runs after HTML is fully loaded -->
+    <link rel="stylesheet" href="css/celestial.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="hero">
+        <h1>Welcome to Skymap</h1>
+        <p>Your guide to the night sky. Take a look at what's above you tonight.</p><br>
+    </div>
+    <div class="wrapper">
+        <div class="starmap" id="starmap">
+            <!-- Place for Star Map -->
+            <div id="custom-form-container">
+                <h2>Generate a Skymap</h2>
+                <p>Click on Generate skymap to get a skymap of the current location and time.
+                <br>Note: Details will automatically be filled using geolocation and current date time.
+                </p><br>
+                <div style="overflow:hidden;">
+                    <div id="celestial-map"></div>
+                </div>
+                <form id="custom-form">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required readonly>
+                    
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required readonly>
+                    
+                    <label for="latitude">Latitude:</label>
+                    <input type="number" step="any" id="latitude" name="latitude" required readonly>
+                    
+                    <label for="longitude">Longitude:</label>
+                    <input type="number" step="any" id="longitude" name="longitude" required readonly>
+                    
+                    <button type="submit" class="generate-button">Generate skymap</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

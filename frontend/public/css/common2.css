@@ -1,0 +1,123 @@
+/* Reset and basic styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif; /* Main font for the body */
+    background: #00062f; /* Dark space-like background */
+    color: #f5f5f5;
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+/* Header */
+header { /* Adjust as per your Pacific Cyan color */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 0 0px 8px rgba(0, 180, 216, 0.711); /* Soft glow effect */
+}
+
+/* Main content styling */
+main {
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Styling */
+.section {
+    background: #001f54; /* Similar to Pacific Dark */
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    font-size: 2rem;
+    border-bottom: 1.4px solid #00b4d8;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+/* Paragraph styling within sections */
+.section p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+}
+/* Navigation Section */
+/* Navigation Section */
+/* Navigation Section */
+/* Navigation Section */
+/* Container for the list */
+/* Navigation Section */
+.navigation {
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Separate header styling */
+.navigation h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #b2f5ff; /* Light color for the header text */
+}
+
+/* Grid container for the list items */
+.navigation .nav-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust to 2 or 3 columns based on screen size */
+    gap: 1rem; /* Space between the items */
+}
+
+/* List items (buttons or links) */
+.navigation .nav-items a {
+    color: #94dee9; /* Text color */
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for the buttons */
+.navigation .nav-items a:hover {/* Change background on hover */
+    color: var(--snow) /* Slight text color change */
+}
